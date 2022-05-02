@@ -29,12 +29,9 @@ function getSeason(date) {
     throw new Error("Invalid date!")
   }
 
-  // try {
-  //   Date.prototype.getUTCDate(date)
-  // } catch { 
-  //   throw new Error("Invalid date!")
-
-  // }
+  if (Object.getOwnPropertySymbols(date).length) { 
+    throw new Error("Invalid date!")
+  }
 
   try {
     let month = date.getMonth();
